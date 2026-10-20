@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickBite – Food Delivery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">🍔 Quick<span>Bite</span></a>
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-btn" id="openCart" aria-label="Open cart">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Hungry? We deliver <span>happiness</span> to your door.</h1>
+        <p>Order from your favourite restaurants and get fresh, hot food in 30 minutes or less.</p>
+        <form class="search" id="searchForm">
+          <input type="text" id="searchInput" placeholder="Search for pizza, burgers, biryani..." />
+          <button type="submit">Search</button>
+        </form>
+        <div class="hero-stats">
+          <div><strong>500+</strong><span>Restaurants</span></div>
+          <div><strong>30 min</strong><span>Avg. delivery</span></div>
+          <div><strong>4.8★</strong><span>Customer rating</span></div>
+        </div>
+      </div>
+      <div class="hero-art">🍕</div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="section" id="menu">
+    <div class="container">
+      <h2 class="section-title">Popular Dishes</h2>
+      <p class="section-sub">Pick a category or search to find your next meal.</p>
+      <div class="filters" id="filters"></div>
+      <div class="grid" id="menuGrid"></div>
+      <p class="empty" id="emptyMsg" hidden>No dishes found. Try a different search.</p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section alt" id="how">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps">
+        <div class="step"><div class="step-icon">📍</div><h3>Choose a dish</h3><p>Browse hundreds of dishes from top restaurants.</p></div>
+        <div class="step"><div class="step-icon">💳</div><h3>Place your order</h3><p>Add to cart and check out in seconds.</p></div>
+        <div class="step"><div class="step-icon">🛵</div><h3>Fast delivery</h3><p>Track your rider and enjoy hot food at home.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <div>
+        <div class="logo">🍔 Quick<span>Bite</span></div>
+        <p>Delicious food, delivered fast.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>support@quickbite.example</p>
+        <p>+91 98765 43210</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <p>About us</p>
+        <p>Careers</p>
+        <p>Partner with us</p>
+      </div>
+    </div>
+    <p class="copy">© 2026 QuickBite. All rights reserved.</p>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart" aria-hidden="true">
+    <div class="cart-head">
+      <h3>Your Cart</h3>
+      <button id="closeCart" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="row"><span>Subtotal</span><span id="subtotal">₹0</span></div>
+      <div class="row"><span>Delivery fee</span><span id="delivery">₹0</span></div>
+      <div class="row total"><span>Total</span><span id="total">₹0</span></div>
+      <button class="checkout" id="checkoutBtn">Place Order</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
